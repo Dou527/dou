@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_fenlei"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#C7C7C7"
+        android:gravity="center"
+        android:hint="🔍商品搜索，共239款好物"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <q.rorbin.verticaltablayout.VerticalTabLayout
+        android:id="@+id/tab_fenlei"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:tab_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fl_fenlei"
+        app:layout_constraintTop_toTopOf="@id/fl_fenlei"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tab_mode="scrollable" />
+
+    <FrameLayout
+        android:id="@+id/fl_fenlei"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tab_fenlei"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_fenlei" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
